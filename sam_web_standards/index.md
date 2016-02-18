@@ -69,51 +69,11 @@ URLs should be case-*insensitive*; therefore, the following URL pairs should res
 
 This allows communication collateral to be built in a more human-readable manner by using upper- and lower-case letters to separate words within URLs while simultaneously allowing direct copy and paste of the URL into a browser.
 
-## Information Architecture
-
-Information Architecture, in terms of navigation, refers to the layout and depth of pages within a website. There are two primary ways for a front-end user to find information. The first is through links from one page to another. The second is by searching for content and following links within those results. 
-
-When a front-end user is looking for high-level or general information, the front-end user should be able to navigate the site quickly via static menus. The front-end user may not know exactly where to go or what (s)he is looking for; the architecture can help guide the front-end user by starting broad (categories) and becoming more detailed (a specific notice, wage determination, program, and so on).
-
-When a front-end user knows the information (s)he is looking for, search becomes the better option; therefore, front-end users should be allowed to search using text with additional filtering capabilities within a given category.
-
-### Navigation
-
-The *SAM Web Standards* recognize three levels of navigation for page-related content.
-
-1. **Main Navigation:** Contained within the header and footer components and used to navigate between system-wide pages (the Legal page, for example) and between categories within the system (Wages, for example). From a front-end user perspective, this results in a change from transition.SAM.gov to something like transition.SAM.gov/wages.
-2. **Category Navigation:** Appended to the header area and provides navigation within a category; thereby, allowing each category to have primary pages (“Due to Be Revised” within Wages, for example). Resulting in something like transition.SAM.gov/wages/to-be-revised.
-3. **Sidebar Navigation (up to three levels):** Navigation appearing in a vertical sidebar along the left side of pages (see the [US Web Design Standards](https://playbook.cio.gov/designstandards/sidenav/)). This type of navigation should be avoided, if possible or practical. Further, if possible, only one level of navigation will make it easier to navigate both the site and categories.
-
-### Content
-
-Information Architecture, in terms of content, refers to how content is displayed. This could be the ordering of information within a block of content (chapters within a book, paragraphs within a chapter, sentences within a paragraph, and so on) or how blocks of content are arranged within a page (books in a library).
-
-For the purposes of the *SAM Web Standards* we recognize two primary types of content from a front-end user perspective: content and metadata. Content refers to titles of pages, body copy, attachments, and so on. Metadata refers to details related to *that* content; posting date, related category, and so on.
-
-Grouping content and metadata separately allows a front-end user to quickly discern the *content* of a page and information *about* the content of a page. Further, content and metadata should be ordered, as much as possible, in order of concern; a posted date may be more important than who posted something from a front-end user perspective. For reference, see the Inverted Pyramid from the profession of journalism.
-
-### Content-focused and printable
-
-For content pages (as opposed to those designed as portals or navigation purposes), the text-based content should not be overpowered by the surrounding navigation or branding (chrome). 
-
-If possible, use the default styles applied by the *US Web Standards*; otherwise, some things to consider:
-
-* Normal operating distance from the screen should be considered (handheld device versus laptop or desktop). 
-* To allow users the ability to adjust font sizes using their browser, front-end developers and designers should use relative font sizing (ems) and not stipulate font sizes less than one em. 
-* Increased leading (the space between lines) makes it easier for readers to discern one line of text from the next. 
-
-On any given page a front-end user should be able to print (or print to file) the content of that page and receive a well-formed (readable) document, without chrome elements. Print stylesheets can be used to facilitate this outcome by hiding the navigation elements, sidebars, footers (except copyright information, if applicable), and so on. Further, the size of the printed page is usually unknown; therefore, it is important to remove (or override) any fixed width information and replace it with a percentage (usually 100%).
-
-NOTE: Printing a page should only include content considered public unless you add proper document handling, marking and labeling in accordance with Federal regulations.
-
-## Front-End Developer
-
-### Dynamic Layout, Bandwidth, and Processor Speeds
+## Dynamic Layout, Bandwidth, and Processor Speeds
 
 As the Internet becomes more ubiquitous across multiple platforms and devices, it is important to allow for various display sizes, download speeds (bandwidth) and processing capabilities. As such, it is important to create layouts that adjust and change content as the display width of the screen changes; height is not considered, as scrolling vertically can be of any length. Further, whenever possible, complex processes should be performed on the server before content is downloaded by the user’s device (server-side) as opposed to on the device (client-side) using technologies such as JavaScript.
 
-### Pages, Content, and Other Elements
+## Pages, Content, and Other Elements
 
 A Web page is made up of three primary components: URL, page title, and content. Without a URL, you cannot get to a specific page. Page titles, while optional, help you orient within the overall environment. Content can be described as related text, images or other data conveying a topic of interest; therefore, site navigation, footer text, and so on (chrome) are not generally considered content. 
 
@@ -123,7 +83,7 @@ Having said that, chrome elements are considered part of the page. transition.SA
 * Private pages, content, and other elements are not delivered by the system to front-end users unless logged in. Put another way, links to pages or the content of a page requiring authentication should not be contained within the hypertext markup language (HTML) of the served page.
 * By extension, a page containing both types of content and elements displays the public content to all front-end users and both the public and private content to logged in front-end users.
 
-### Web Technologies
+## Web Technologies
 
 The server-side language performs the duties of querying the database(s) and preparing HTML content for the user’s device (client). Because the hardware capabilities are managed by transition.SAM.gov, it is recommended that the server-side language be used as much as possible for processing as much information as possible.
 
