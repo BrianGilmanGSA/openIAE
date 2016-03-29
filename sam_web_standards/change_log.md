@@ -14,3 +14,5 @@ layout: sam_web_standards
 - Renamed Form Templates to [Form Controls]({{ site.baseurl }}/sam_web_standards/visual_style/#form-controls) on the Components page.
 - Minor edits to [Content Style]({{ site.baseurl }}/sam_web_standards/content_style) page.
 - Created /assets/sam_web_standards/main.scss for formatting elements specific to the *SAM Web Standards*.
+- 
+
