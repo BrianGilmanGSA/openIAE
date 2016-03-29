@@ -51,6 +51,18 @@ The *SAM Web Standards* makes use of the [form controls](https://playbook.cio.go
 
 **Mobile Consideration:** Data entry on a mobile (handheld, phone, and so on) device can be tedious; therefore, when designing and developing forms, minimize the use of text input fields and large text areas.
 
+### Text Input
+<div class="preview">
+  <div class="usa-input-error">
+    <label class="usa-input-error-label">Title</label>
+    <span class="usa-input-error-message" id="title-input-error" role="alert">The alert needs a title.</span>
+    <input type="text" name="title" required="required"aria-describedby="title-input-error" />
+    <span class="usa-form-hint">The <strong>bold</strong> text at the beginning of the alert.</span>
+  </div>
+</div>
+
+
+
 ### Application/Category Search Forms
 
 Most of the applications/categories within SAM, use search forms to retrieve data related to an application/category. The forms accommodate text-based search as well as the optional application of filters. Filters are applied using a dropdown menu of options; multiple selections are allowed. Users can then deselect identified filters.
